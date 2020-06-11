@@ -5,6 +5,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 import api from '../../services/api';
 
 import './styles.css';
+import InputText from "../../components/inputs/input-text";
 
 const EditContato = () => {
   const history = useHistory();
@@ -72,21 +73,17 @@ const EditContato = () => {
       <div className="content">
         <form>
           <div className="input-group">
-            <label htmlFor="nome" >Nome</label>
-            <input value={nome} onChange={e => setNome(e.target.value)}/>
+            <InputText id="nome" label="Nome" value={nome} change={setNome} />
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">E-mail</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)}/>
+            <InputText id="email" label="E-mail" value={email} change={setEmail} />
           </div>
           <div className="input-group">
-            <label htmlFor="telefone">Telefone</label>
-            <input value={telefone} onChange={e => setTelefone(e.target.value)}/>
+            <InputText id="telefone" label="Telefone" value={telefone} change={setTelefone} />
           </div>
           <div className="input-group">
-            <label htmlFor="endereco">Endereço</label>
-            <input value={endereco} onChange={e => setEndereco(e.target.value)}/>
+            <InputText id="endereco" label="Endereco" value={endereco} change={setEndereco}></InputText>
           </div>
         <button onClick={acao === 'Cadastrar'?handleInsertContato:handleUpdateContato} className="button" type="submit">{acao}</button>
         </form>
