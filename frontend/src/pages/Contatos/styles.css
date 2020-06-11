@@ -1,0 +1,38 @@
+.list-container {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.list-container header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.list-container header a {
+  color: var(--title-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.list-container .content {
+  width: 90%;  
+  padding: 30px;
+  background: #f8f8ff;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.list-container .content table tr td, th{
+ border: 1px solid #000;
+}
