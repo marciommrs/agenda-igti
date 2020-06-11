@@ -5,12 +5,15 @@
     <br>
 </h3>
 
+
+</br></br>
 # Trabalho prático - IGTI
 
 Projeto: Cadastro de Contatos<br/>
 Descrição: Trabalho de prático do curso de Arquitetura JavaScript.
 
 
+</br></br>
 ## :heavy_check_mark: Índice
 
 - [Sobre](#sobre)
@@ -18,10 +21,14 @@ Descrição: Trabalho de prático do curso de Arquitetura JavaScript.
 - [Resultado](#resultado)
 - [Como Usar](#como-usar)
 
+
+</br></br>
 <a id="sobre"></a>
 ## :bookmark: Sobre
 O <strong>Cadastro de contatos</strong> é uma aplicação Web para listar, cadastrar, excluir e alterar registros de contatos.
 
+
+</br></br>
 <a id="tecnologias-utilizadas"></a>
 ## :books:  Tecnologias Utilizadas
 
@@ -31,11 +38,18 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - [ReactJS](https://reactjs.org/)
 
+
+</br></br>
 <a id="resultado"></a>
 ## :computer: Resultado Web
 
-Estilização pendente...
+<h1 align="center">
+    <img alt="Lista de Contatos" src=".github/contatos.png" width="100%">
+    <img alt="Edição de Contato" src=".github/edit.png" width="100%">
+</h1>
 
+
+</br></br>
 <a id="como-usar"></a>
 ## :pencil: Como usar
 
@@ -44,11 +58,13 @@ Estilização pendente...
   - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado na máquina
   - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)**.
 
+
 1. Faça um clone :
 
 ```sh
   $ git clone https://github.com/marciommrs/cadastro-livros-igti.git
 ```
+
 
 2. Executando a Aplicação:
 
