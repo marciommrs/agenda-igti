@@ -29,9 +29,12 @@ class ContatosController {
   }
 
   async delete(request: Request, response: Response) {
-    const { id } = request.params;
-    var index = contatos.findIndex(c => c.id == Number(id));
-    contatos.splice(index, 1);
+    const ids = String(request.params.id).split(";");
+    for(let id of ids) {
+      var index = contatos.findIndex(c => c.id == Number(id));
+      contatos.splice(index, 1);
+    }
+
     return response.json("Registro excluído");
   }
 
