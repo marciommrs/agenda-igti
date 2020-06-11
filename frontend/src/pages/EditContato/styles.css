@@ -52,5 +52,9 @@
 
 .register-container .content form .input-group {
   display: flex;
-  align-items: baseline;
+  align-items: baseline;  
+}
+
+.register-container .content .input-group label  {
+  width: 20%;
 }
