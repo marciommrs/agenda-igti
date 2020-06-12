@@ -1,12 +1,15 @@
 import React from "react";
 import {TextField} from "@material-ui/core";
 
+import './styles.css'
 
 function InputText(props: any) {
 
     return (
-        <TextField id={props.id} label={props.label} value={props.value} variant="outlined"
-                   onChange={e=> props.change(e.target.value)}/>
+        <div className="inputText">
+            <TextField id={props.id} label={props.label} value={props.value} variant="outlined"
+                       onChange={e=> props.change(e.target.value)} />
+        </div>
     );
 }
 

@@ -20,6 +20,7 @@ import Switch from '@material-ui/core/Switch';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import FilterListIcon from '@material-ui/icons/FilterList';
+import AddBoxIcon from '@material-ui/icons/AddBox';
 import {Contato} from "../../../../backend/src/controllers/samples/contatos";
 import {Link} from 'react-router-dom';
 import {FiEdit2, FiTrash2} from 'react-icons/fi';
@@ -168,7 +169,8 @@ const useToolbarStyles = makeStyles((theme: Theme) =>
 
 interface EnhancedTableToolbarProps {
     numSelected: number,
-    handleDelete: () => void
+    handleDelete: () => void,
+    handleAdd: () => void
 }
 
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
@@ -190,6 +192,13 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
                     Agenda
                 </Typography>
             )}
+            {(
+                <Tooltip title="Add Contato">
+                    <IconButton onClick={props.handleAdd}>
+                        <AddBoxIcon/>
+                    </IconButton>
+                </Tooltip>
+            )}
             {numSelected > 0 ? (
                 <Tooltip title="Delete">
                     <IconButton onClick={props.handleDelete} aria-label="delete">
@@ -197,11 +206,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
                     </IconButton>
                 </Tooltip>
             ) : (
-                <Tooltip title="Filter list">
-                    <IconButton aria-label="filter list">
-                        <FilterListIcon/>
-                    </IconButton>
-                </Tooltip>
+                ""
             )}
         </Toolbar>
     );
@@ -304,7 +309,7 @@ export default function EnhancedTable(props: any) {
     return (
         <div className={classes.root}>
             <Paper className={classes.paper}>
-                <EnhancedTableToolbar numSelected={selected.length} handleDelete={() => props.deleteMultiple(selected)}/>
+                <EnhancedTableToolbar numSelected={selected.length} handleDelete={() => props.deleteMultiple(selected)} handleAdd={() => props.addAction()}/>
                 <TableContainer>
                     <Table
                         className={classes.table}

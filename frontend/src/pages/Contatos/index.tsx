@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import {FiTrash2, FiEdit2, FiBook} from 'react-icons/fi';
-
+import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -17,6 +15,7 @@ interface Contato {
 }
 
 const Contatos = () => {
+    const history = useHistory();
     const [contatos, setContatos] = useState<Contato[]>([]);
 
     useEffect(() => {
@@ -54,8 +53,17 @@ const Contatos = () => {
         }
     }
 
+    function handleAddContato() {
+        history.push("/editContato");
+    }
+
     return (
-        <EnhancedTable data={contatos} deleteMultiple={handleDeleteMultiple} deleteAction={handleDeleteContato} editAction={handleUpdateContato}>
+        <EnhancedTable 
+            data={contatos} 
+            deleteMultiple={handleDeleteMultiple} 
+            deleteAction={handleDeleteContato} 
+            editAction={handleUpdateContato}
+            addAction={handleAddContato}>
         </EnhancedTable>
     );
 }

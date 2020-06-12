@@ -72,19 +72,10 @@ const EditContato = () => {
       </header>
       <div className="content">
         <form>
-          <div className="input-group">
             <InputText id="nome" label="Nome" value={nome} change={setNome} />
-          </div>
-
-          <div className="input-group">
             <InputText id="email" label="E-mail" value={email} change={setEmail} />
-          </div>
-          <div className="input-group">
             <InputText id="telefone" label="Telefone" value={telefone} change={setTelefone} />
-          </div>
-          <div className="input-group">
             <InputText id="endereco" label="Endereco" value={endereco} change={setEndereco}></InputText>
-          </div>
         <button onClick={acao === 'Cadastrar'?handleInsertContato:handleUpdateContato} className="button" type="submit">{acao}</button>
         </form>
       </div>
