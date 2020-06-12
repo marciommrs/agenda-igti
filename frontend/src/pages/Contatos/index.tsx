@@ -58,13 +58,15 @@ const Contatos = () => {
     }
 
     return (
-        <EnhancedTable 
-            data={contatos} 
-            deleteMultiple={handleDeleteMultiple} 
-            deleteAction={handleDeleteContato} 
-            editAction={handleUpdateContato}
-            addAction={handleAddContato}>
-        </EnhancedTable>
+        <div className="tableMargin">
+            <EnhancedTable
+                data={contatos}
+                deleteMultiple={handleDeleteMultiple}
+                deleteAction={handleDeleteContato}
+                editAction={handleUpdateContato}
+                addAction={handleAddContato}>
+            </EnhancedTable>
+        </div>
     );
 }
 

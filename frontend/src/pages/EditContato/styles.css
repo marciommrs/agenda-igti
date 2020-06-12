@@ -1,5 +1,6 @@
 .register-container {
  width: 100%;
+ min-width: 450px;
  max-width: 1120px;
  height: 100vh;
  margin: 0 auto;
@@ -34,6 +35,9 @@
  display: flex;
 }
 
+.style250 {
+ width: 250px;
+}
 
 .register-container .content form {
  background: #FFF;

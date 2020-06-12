@@ -11,7 +11,12 @@
 
 Projeto: Cadastro de Contatos<br/>
 Descrição: Trabalho de prático do curso de Arquitetura JavaScript.
-
+<ul>
+<li>Marcio Marques Rosa</li>
+<li>Leandro Marinho Barcellos</li>
+<li>Lucio de Freitas Pereira</li>
+<li>Luis Filipe Campos Cardoso</li>
+</ul>
 
 </br></br>
 ## :heavy_check_mark: Índice

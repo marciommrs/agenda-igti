@@ -7,7 +7,7 @@ function InputText(props: any) {
 
     return (
         <div className="inputText">
-            <TextField id={props.id} label={props.label} value={props.value} variant="outlined"
+            <TextField className={props.className} id={props.id} label={props.label} value={props.value} variant="outlined"
                        onChange={e=> props.change(e.target.value)} />
         </div>
     );
