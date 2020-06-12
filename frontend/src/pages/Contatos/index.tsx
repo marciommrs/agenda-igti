@@ -23,7 +23,7 @@ const Contatos = () => {
         api.get('/contatos')
             .then(response => {
                 setContatos(response.data);
-            })
+            });
     }, [contatos]);
 
     async function handleDeleteContato(id: Number) {
@@ -39,8 +39,19 @@ const Contatos = () => {
         localStorage.setItem('id', `${id}`);
     }
 
-    const handleDeleteMultiple = (ids: number[]) =>{
+    async function handleDeleteMultiple(ids: number[]) {
         console.log(ids);
+        try {
+            await api.delete(`contatos/${ids.join(';')}`);
+
+            setContatos(contatos.filter(contato => {
+                for(let id of ids) {
+                    return contato.id !== id
+                }
+            }));
+        } catch (err) {
+            alert('Erro ao deletar contato, tente novamente');
+        }
     }
 
     return (
