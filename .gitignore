@@ -1,2 +1,10 @@
 .DS_Store
 node_modules
+/.idea/.gitignore
+/.idea/agenda-igti-2.iml
+/.idea/jsLinters/jslint.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/package-lock.json
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
