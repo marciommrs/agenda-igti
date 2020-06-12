@@ -19,31 +19,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import FilterListIcon from '@material-ui/icons/FilterList';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import {Contato} from "../../../../backend/src/controllers/samples/contatos";
-import {Link} from 'react-router-dom';
-import {FiEdit2, FiTrash2} from 'react-icons/fi';
 import { useHistory } from "react-router-dom";
 
-
-// interface Data {
-//     calories: number;
-//     carbs: number;
-//     fat: number;
-//     name: string;
-//     protein: number;
-// }
-
-function createData(
-    id: number,
-    nome: string,
-    email: string,
-    telefone: string,
-    endereco: string
-): Contato {
-    return {id, nome, email, telefone, endereco};
-}
 
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
